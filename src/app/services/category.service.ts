@@ -25,4 +25,9 @@ export class CategoryService {
 
   }
 
+  getCategory(categoryId: number): Observable<Category> {
+    return this.httpClient.get<Category>(`${BASE_API_URL}/${categoryId}`);
+  }
+
+
 }
